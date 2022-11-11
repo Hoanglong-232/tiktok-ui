@@ -6,7 +6,7 @@ import Tippy from '@tippyjs/react/headless';
 import { Wrapper as PopperWrapper } from '~/component/Popper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
-import AccountItem from '~/component/AccountItem';
+import AccountItem from '../AccountItem';
 
 const cx = classNames.bind(styles);
 
