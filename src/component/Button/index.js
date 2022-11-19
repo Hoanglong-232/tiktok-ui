@@ -1,9 +1,8 @@
-import { type } from '@testing-library/user-event/dist/type';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
-import stykes from './Button.module.scss';
+import styles from './Button.module.scss';
 
-const cx = classNames.bind(stykes);
+const cx = classNames.bind(styles);
 
 function Button({
     to,
