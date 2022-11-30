@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleQuestion,
     faCircleXmark,
-    faCloudUpload,
     faCoins,
     faEarthAsia,
     faEllipsisVertical,
@@ -25,6 +24,8 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import AccountItem from '../AccountItem';
 import Menu from '~/component/Popper/Menu';
+import { MessageIcon, UploadIcon } from '~/component/Icon';
+import Image from '~/component/Image';
 
 const cx = classNames.bind(styles);
 
@@ -146,7 +147,12 @@ function Header() {
                         <>
                             <Tippy delay={[0, 200]} content="Upload Video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy delay={[0, 200]} content="Message" placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <MessageIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -158,10 +164,11 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 src="https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1653272836951046~c5_100x100.jpeg?x-expires=1669521600&x-signature=Ool%2BwjqcXoQShyAOAwL%2BUchJBWw%3D"
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
+                                // fallBack="https://scontent.fhan2-1.fna.fbcdn.net/v/t39.30808-1/274357273_3292556190972611_4019172401412208723_n.jpg?stp=cp0_dst-jpg_p40x40&_nc_cat=110&ccb=1-7&_nc_sid=7206a8&_nc_ohc=BxBnQ3FbpUsAX8-2xyB&_nc_ht=scontent.fhan2-1.fna&oh=00_AfDyFNLGLXJ5l-8K8VInMl1ObZm5BFisiyTLLCjlQnl3OA&oe=638CBE68"
                             />
                         ) : (
                             <button className={cx('more-button')}>
