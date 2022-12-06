@@ -6,20 +6,16 @@ import Image from '~/component/Image';
 
 const cx = classNames.bind(styles);
 
-function AccountItem() {
+function AccountItem({ data }) {
     return (
         <div className={cx('wrapper')}>
-            <Image
-                className={cx('avatar')}
-                src="https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1653272836951046~c5_100x100.jpeg?x-expires=1669521600&x-signature=Ool%2BwjqcXoQShyAOAwL%2BUchJBWw%3D"
-                alt="thanhmeo"
-            />
+            <Image className={cx('avatar')} src={data.avatar} alt={data.full_name} />
             <div className={cx('info')}>
                 <h4 className={cx('name')}>
-                    <span>Thanh Mèo</span>
-                    <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />
+                    <span>{data.full_name}</span>
+                    {data.tick && <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />}
                 </h4>
-                <span className={cx('username')}>thanhmeo.18</span>
+                <span className={cx('username')}>{data.nickname}</span>
             </div>
         </div>
     );
