@@ -52,7 +52,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
                                 }}
                             />
                         )}
-                        {remderItems()}
+                        <div className={cx('menu-body')}> {remderItems()}</div>
                     </PopperWrapper>
                 </div>
             )}
