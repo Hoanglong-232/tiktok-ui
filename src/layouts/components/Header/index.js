@@ -52,12 +52,12 @@ const MENU_ITEMS = [
     },
     {
         icon: <FontAwesomeIcon icon={faCircleQuestion} />,
-        title: 'Feddback and help',
+        title: 'Feedback and help',
         to: '/Feedback',
     },
     {
         icon: <FontAwesomeIcon icon={faKeyboard} />,
-        title: 'Keyboar shorcut',
+        title: 'Keyboard shorcut',
     },
 ];
 
@@ -86,7 +86,7 @@ function Header() {
         },
         {
             icon: <FontAwesomeIcon icon={faGear} />,
-            title: 'Setitings',
+            title: 'Settings',
             to: '/settings',
         },
         ...MENU_ITEMS,
@@ -138,10 +138,10 @@ function Header() {
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
                             <Image
-                                src="https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1653272836951046~c5_100x100.jpeg?x-expires=1669521600&x-signature=Ool%2BwjqcXoQShyAOAwL%2BUchJBWw%3D"
                                 className={cx('user-avatar')}
-                                alt="Nguyen Van A"
-                                // fallBack="https://scontent.fhan2-1.fna.fbcdn.net/v/t39.30808-1/274357273_3292556190972611_4019172401412208723_n.jpg?stp=cp0_dst-jpg_p40x40&_nc_cat=110&ccb=1-7&_nc_sid=7206a8&_nc_ohc=BxBnQ3FbpUsAX8-2xyB&_nc_ht=scontent.fhan2-1.fna&oh=00_AfDyFNLGLXJ5l-8K8VInMl1ObZm5BFisiyTLLCjlQnl3OA&oe=638CBE68"
+                                src="https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1653272836951046~c5_100x100.jpeg?x-expires=1669521600&x-signature=Ool%2BwjqcXoQShyAOAwL%2BUchJBWw%3D"
+                                alt="Nguyen Hoang Long"
+                                fallback="https://fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png"
                             />
                         ) : (
                             <button className={cx('more-button')}>
